@@ -35,14 +35,14 @@ variable "sku_name" {
   
 }
 
-# variable "" {
-#     type = string
+variable "delegated_subnet_id" {
+    type = string
   
-# }
-# variable "" {
-#     type = string
+}
+variable "vnet_id" {
+    type = string
   
-# }
+}
 # variable "" {
 #     type = string
   
