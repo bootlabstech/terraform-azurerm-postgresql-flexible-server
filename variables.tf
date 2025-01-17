@@ -22,10 +22,7 @@ variable "administrator_login" {
     type = string
   
 }
-variable "administrator_password" {
-    type = string
-  
-}
+
 variable "storage_mb" {
     type = string
   
@@ -47,3 +44,7 @@ variable "vnet_id" {
 #     type = string
   
 # }
+variable "keyvault_name" {
+    type = string
+  
+}
