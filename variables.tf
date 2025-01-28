@@ -32,14 +32,7 @@ variable "sku_name" {
   
 }
 
-variable "delegated_subnet_id" {
-    type = string
-  
-}
-variable "vnet_id" {
-    type = string
-  
-}
+
 # variable "" {
 #     type = string
   
