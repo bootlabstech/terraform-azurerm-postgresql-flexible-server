@@ -66,13 +66,18 @@ variable "private_dns_zone_ids" {
 
 variable "mode" {
   type        = string
-  default = "SameZone"
+  default = "ZoneRedundant"
   description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 
 }
 variable "standby_availability_zone" {
   type        = string
-  default = "2"
+  default = "1"
   description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 
+}
+variable "zone" {
+  type        = string
+  default = "1"
+  
 }
