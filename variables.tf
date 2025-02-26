@@ -64,3 +64,15 @@ variable "private_dns_zone_ids" {
   description = "Specifies the list of Private DNS Zones to include within the private_dns_zone_group."
 }
 
+variable "mode" {
+  type        = string
+  default = "SameZone"
+  description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
+
+}
+variable "standby_availability_zone" {
+  type        = string
+  default = "2"
+  description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
+
+}
