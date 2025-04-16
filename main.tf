@@ -8,18 +8,18 @@ resource "azurerm_postgresql_flexible_server" "postgresql_flexible_server" {
   administrator_password = random_password.password.result
   storage_mb             = var.storage_mb
   sku_name               = var.sku_name
-  # zone                   = var.zone
-  # high_availability {
-  #   mode                     = var.mode
-  #   standby_availability_zone = var.standby_availability_zone
-  # }
+  zone                   = var.zone
+  high_availability {
+    mode                     = var.mode
+    standby_availability_zone = var.standby_availability_zone
+  }
 
-  # lifecycle {
-  #   ignore_changes = [
-  #     zone,
-  #     high_availability.0.standby_availability_zone
-  #   ]
-  # }
+  lifecycle {
+    ignore_changes = [
+      zone,
+      high_availability.0.standby_availability_zone
+    ]
+  }
   }
 
 
