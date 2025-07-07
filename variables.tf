@@ -42,27 +42,27 @@ variable "keyvault_name" {
   
 }
 
-# variable "private_endpoint_subnet_id" {
-#   type        = string
-#   description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
+variable "private_endpoint_subnet_id" {
+  type        = string
+  description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 
-# }
+}
 
-# variable "is_manual_connection" {
-#   type        = bool
-#   description = "Does the Private Endpoint require Manual Approval from the remote resource owner?"
-#   default     = false
+variable "is_manual_connection" {
+  type        = bool
+  description = "Does the Private Endpoint require Manual Approval from the remote resource owner?"
+  default     = false
 
-# }
-# variable "subresource_names" {
-#   type        = list(string)
-#   description = " A list of subresource names which the Private Endpoint is able to connect to."
-#   default = [ "postgresqlServer" ]
-# }
-# variable "private_dns_zone_ids" {
-#   type        = list(string)
-#   description = "Specifies the list of Private DNS Zones to include within the private_dns_zone_group."
-# }
+}
+variable "subresource_names" {
+  type        = list(string)
+  description = " A list of subresource names which the Private Endpoint is able to connect to."
+  default = [ "postgresqlServer" ]
+}
+variable "private_dns_zone_ids" {
+  type        = list(string)
+  description = "Specifies the list of Private DNS Zones to include within the private_dns_zone_group."
+}
 
 variable "mode" {
   type        = string
@@ -72,7 +72,7 @@ variable "mode" {
 }
 variable "standby_availability_zone" {
   type        = string
-  default = "1"
+  default = "2"
   description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 
 }
