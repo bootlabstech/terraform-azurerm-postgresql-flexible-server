@@ -3,7 +3,7 @@ resource "azurerm_postgresql_flexible_server" "postgresql_flexible_server" {
   resource_group_name    = var.resource_group_name
   location               = var.location
   version                = var.psqlversion
-  create_mode            = var.create_mode 
+  create_mode            = var.create_mode
   administrator_login    = var.administrator_login
   administrator_password = random_password.password.result
   storage_mb             = var.storage_mb
@@ -19,12 +19,7 @@ resource "azurerm_postgresql_flexible_server" "postgresql_flexible_server" {
       zone
     ]
   }
-  }
-
-
-
-
-
+}
 
 data "azurerm_key_vault" "key_vault" {
   name                = var.keyvault_name
@@ -52,7 +47,7 @@ resource "azurerm_key_vault_secret" "postgressql_password" {
   key_vault_id = data.azurerm_key_vault.key_vault.id
 
   depends_on = [azurerm_postgresql_flexible_server.postgresql_flexible_server]
-}  
+}
 # Creates  a private endpoint with private dns
 resource "azurerm_private_endpoint" "endpoint" {
   name                = "${var.name}-pe"
