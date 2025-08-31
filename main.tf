@@ -1,14 +1,16 @@
 resource "azurerm_postgresql_flexible_server" "postgresql_flexible_server" {
-  name                   = var.name
-  resource_group_name    = var.resource_group_name
-  location               = var.location
-  version                = var.psqlversion
-  create_mode            = var.create_mode
-  administrator_login    = var.administrator_login
-  administrator_password = random_password.password.result
-  storage_mb             = var.storage_mb
-  sku_name               = var.sku_name
-  zone                   = var.zone
+  name                          = var.name
+  resource_group_name           = var.resource_group_name
+  location                      = var.location
+  version                       = var.psqlversion
+  create_mode                   = var.create_mode
+  administrator_login           = var.administrator_login
+  administrator_password        = random_password.password.result
+  storage_mb                    = var.storage_mb
+  sku_name                      = var.sku_name
+  zone                          = var.zone
+  public_network_access_enabled = var.public_network_access_enabled
+
   # high_availability {
   #   mode                     = var.mode
   #   standby_availability_zone = var.standby_availability_zone

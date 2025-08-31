@@ -43,6 +43,12 @@ variable "keyvault_name" {
   description = "The name of the Key Vault used for storing secrets (e.g., admin password)."
 }
 
+variable "public_network_access_enabled" {
+  type        = bool
+  description = "to enable the public access of postgres db"
+  default     = false
+}
+
 variable "private_endpoint_subnet_id" {
   type        = string
   description = "The ID of the subnet from which private IP addresses will be allocated for this private endpoint."
