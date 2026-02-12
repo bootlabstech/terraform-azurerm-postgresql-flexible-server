@@ -49,27 +49,27 @@ variable "public_network_access_enabled" {
   default     = false
 }
 
-variable "private_endpoint_subnet_id" {
-  type        = string
-  description = "The ID of the subnet from which private IP addresses will be allocated for this private endpoint."
-}
+# variable "private_endpoint_subnet_id" {
+#   type        = string
+#   description = "The ID of the subnet from which private IP addresses will be allocated for this private endpoint."
+# }
 
-variable "is_manual_connection" {
-  type        = bool
-  description = "Specifies whether the private endpoint requires manual approval from the remote resource owner."
-  default     = false
-}
+# variable "is_manual_connection" {
+#   type        = bool
+#   description = "Specifies whether the private endpoint requires manual approval from the remote resource owner."
+#   default     = false
+# }
 
-variable "subresource_names" {
-  type        = list(string)
-  description = "A list of subresource names that the private endpoint can connect to."
-  default     = ["postgresqlServer"]
-}
+# variable "subresource_names" {
+#   type        = list(string)
+#   description = "A list of subresource names that the private endpoint can connect to."
+#   default     = ["postgresqlServer"]
+# }
 
-variable "private_dns_zone_ids" {
-  type        = list(string)
-  description = "List of private DNS zone IDs to associate with the private endpoint."
-}
+# variable "private_dns_zone_ids" {
+#   type        = list(string)
+#   description = "List of private DNS zone IDs to associate with the private endpoint."
+# }
 
 # variable "mode" {
 #   type        = string
